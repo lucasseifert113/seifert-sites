@@ -1,18 +1,21 @@
+const imageBase =
+  "https://raw.githubusercontent.com/lucasseifert113/seifert-sites/main/public/tay-blendz/recent-cuts";
+
 const recentCuts = [
   {
-    src: "/tay-blendz/recent-cuts/recent-cut-01.png",
+    src: `${imageBase}/recent-cut-01.png`,
     alt: "Tay Blendz haircut with a clean temple fade and sharp lineup",
   },
   {
-    src: "/tay-blendz/recent-cuts/recent-cut-02.png",
+    src: `${imageBase}/recent-cut-02.png`,
     alt: "Tay Blendz haircut with a fresh fade and clean edge-up",
   },
   {
-    src: "/tay-blendz/recent-cuts/recent-cut-03.png",
+    src: `${imageBase}/recent-cut-03.png`,
     alt: "Tay Blendz haircut showing detailed fade work",
   },
   {
-    src: "/tay-blendz/recent-cuts/recent-cut-04.png",
+    src: `${imageBase}/recent-cut-04.png`,
     alt: "Tay Blendz haircut with a polished finished look",
   },
 ];
@@ -69,8 +72,10 @@ export default function Home() {
       <section id="top" className="tay-hero">
         <img
           className="hero-photo"
-          src="/tay-blendz/recent-cuts/recent-cut-01.png"
+          src={recentCuts[0].src}
           alt="Fresh haircut by Tay Blendz"
+          loading="eager"
+          decoding="async"
         />
         <div className="hero-overlay" />
         <div className="hero-grain" />
@@ -150,8 +155,10 @@ export default function Home() {
 
         <div className="about-photo-wrap">
           <img
-            src="/tay-blendz/recent-cuts/recent-cut-02.png"
+            src={recentCuts[1].src}
             alt="Detailed fade by Tay Blendz"
+            loading="lazy"
+            decoding="async"
           />
           <span>Platteville barber</span>
         </div>
@@ -166,7 +173,12 @@ export default function Home() {
         <div className="cuts-grid">
           {recentCuts.map((cut, index) => (
             <figure className={`cut-card cut-${index + 1}`} key={cut.src}>
-              <img src={cut.src} alt={cut.alt} loading="lazy" />
+              <img
+                src={cut.src}
+                alt={cut.alt}
+                loading="lazy"
+                decoding="async"
+              />
               <figcaption>
                 <span>0{index + 1}</span>
                 <strong>Tay Blendz</strong>
