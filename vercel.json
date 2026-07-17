@@ -1,5 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "installCommand": "npm install --production=false"
+  "installCommand": "npm install --include=dev",
+  "buildCommand": "npm install --no-save typescript@5.9.3 @types/node@24 @types/react@19 @types/react-dom@19 && npm run build"
 }
