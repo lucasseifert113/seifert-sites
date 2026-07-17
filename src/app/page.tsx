@@ -1,21 +1,18 @@
-const imageBase =
-  "https://raw.githubusercontent.com/lucasseifert113/seifert-sites/main/public/tay-blendz/recent-cuts";
-
 const recentCuts = [
   {
-    src: `${imageBase}/recent-cut-01.png`,
+    src: "/tay-blendz/recent-cuts/recent-cut-01.png?v=3",
     alt: "Tay Blendz haircut with a clean temple fade and sharp lineup",
   },
   {
-    src: `${imageBase}/recent-cut-02.png`,
+    src: "/tay-blendz/recent-cuts/recent-cut-02.png?v=3",
     alt: "Tay Blendz haircut with a fresh fade and clean edge-up",
   },
   {
-    src: `${imageBase}/recent-cut-03.png`,
+    src: "/tay-blendz/recent-cuts/recent-cut-03.png?v=3",
     alt: "Tay Blendz haircut showing detailed fade work",
   },
   {
-    src: `${imageBase}/recent-cut-04.png`,
+    src: "/tay-blendz/recent-cuts/recent-cut-04.png?v=3",
     alt: "Tay Blendz haircut with a polished finished look",
   },
 ];
@@ -75,7 +72,7 @@ export default function Home() {
           src={recentCuts[0].src}
           alt="Fresh haircut by Tay Blendz"
           loading="eager"
-          decoding="async"
+          decoding="sync"
         />
         <div className="hero-overlay" />
         <div className="hero-grain" />
@@ -157,8 +154,8 @@ export default function Home() {
           <img
             src={recentCuts[1].src}
             alt="Detailed fade by Tay Blendz"
-            loading="lazy"
-            decoding="async"
+            loading="eager"
+            decoding="sync"
           />
           <span>Platteville barber</span>
         </div>
@@ -176,8 +173,8 @@ export default function Home() {
               <img
                 src={cut.src}
                 alt={cut.alt}
-                loading="lazy"
-                decoding="async"
+                loading="eager"
+                decoding="sync"
               />
               <figcaption>
                 <span>0{index + 1}</span>
