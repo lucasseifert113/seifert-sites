@@ -1,21 +1,5 @@
-const recentCuts = [
-  {
-    src: "/tay-blendz/recent-cuts/recent-cut-01.png?v=3",
-    alt: "Tay Blendz haircut with a clean temple fade and sharp lineup",
-  },
-  {
-    src: "/tay-blendz/recent-cuts/recent-cut-02.png?v=3",
-    alt: "Tay Blendz haircut with a fresh fade and clean edge-up",
-  },
-  {
-    src: "/tay-blendz/recent-cuts/recent-cut-03.png?v=3",
-    alt: "Tay Blendz haircut showing detailed fade work",
-  },
-  {
-    src: "/tay-blendz/recent-cuts/recent-cut-04.png?v=3",
-    alt: "Tay Blendz haircut with a polished finished look",
-  },
-];
+const portfolioImage =
+  "https://raw.githubusercontent.com/lucasseifert113/seifert-sites/main/ChatGPT%20Image%20Jul%2017%2C%202026%2C%2001_28_24%20PM.png";
 
 const primaryLinks = [
   {
@@ -69,8 +53,8 @@ export default function Home() {
       <section id="top" className="tay-hero">
         <img
           className="hero-photo"
-          src={recentCuts[0].src}
-          alt="Fresh haircut by Tay Blendz"
+          src={portfolioImage}
+          alt="Tay Blendz haircut portfolio"
           loading="eager"
           decoding="sync"
         />
@@ -152,8 +136,8 @@ export default function Home() {
 
         <div className="about-photo-wrap">
           <img
-            src={recentCuts[1].src}
-            alt="Detailed fade by Tay Blendz"
+            src={portfolioImage}
+            alt="Tay Blendz haircut styles"
             loading="eager"
             decoding="sync"
           />
@@ -167,22 +151,14 @@ export default function Home() {
           <h2>Recent cuts.</h2>
         </div>
 
-        <div className="cuts-grid">
-          {recentCuts.map((cut, index) => (
-            <figure className={`cut-card cut-${index + 1}`} key={cut.src}>
-              <img
-                src={cut.src}
-                alt={cut.alt}
-                loading="eager"
-                decoding="sync"
-              />
-              <figcaption>
-                <span>0{index + 1}</span>
-                <strong>Tay Blendz</strong>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
+        <figure className="portfolio-showcase">
+          <img
+            src={portfolioImage}
+            alt="Tay Blendz portfolio featuring textured flow, taper fade, curl taper, and clean lineup"
+            loading="eager"
+            decoding="sync"
+          />
+        </figure>
       </section>
 
       <section className="final-cta">
